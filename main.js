@@ -28,3 +28,11 @@ const canvas = document.querySelector('.webgl');
 const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.render(scene, camera);
+
+//Animation loop
+const animation = () => {
+  window.requestAnimationFrame(animation);
+  renderer.render(scene, camera);
+};
+
+animation();
