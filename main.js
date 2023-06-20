@@ -1,4 +1,6 @@
 import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+
 //Creating a scene
 const scene = new THREE.Scene();
 
@@ -28,6 +30,10 @@ const canvas = document.querySelector('.webgl');
 const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.render(scene, camera);
+
+//Controls
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
 
 //Animation loop
 const animation = () => {
