@@ -12,3 +12,12 @@ scene.add(mesh);
 const light = new THREE.PointLight(0xffffff, 1, 100);
 light.position.set(0, 10, 10);
 scene.add(light);
+
+//Camera
+const camera = new THREE.PerspectiveCamera(
+  45,
+  sizes.width / sizes.height,
+  0.1,
+  100
+);
+scene.add(camera);
