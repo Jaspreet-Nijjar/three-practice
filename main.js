@@ -34,6 +34,10 @@ renderer.render(scene, camera);
 //Controls
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
+controls.enablePan = false;
+controls.enableZoom = false;
+controls.autoRotate = true;
+controls.autoRotateSpeed = 5;
 
 //Animation loop
 const animation = () => {
