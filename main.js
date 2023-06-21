@@ -39,6 +39,13 @@ controls.enableZoom = false;
 controls.autoRotate = true;
 controls.autoRotateSpeed = 5;
 
+//Window resizing - keeps the sphere in the center
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
 //Animation loop
 const animation = () => {
   window.requestAnimationFrame(animation);
